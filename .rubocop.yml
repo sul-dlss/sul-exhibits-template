@@ -17,6 +17,7 @@ AllCops:
     - "config/**/*"
     - "vendor/**/*"
     - "spec/fixtures/**/*"
+    - "node_modules/**/*"
 
 Rails:
   Enabled: true

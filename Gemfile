@@ -136,3 +136,5 @@ gem 'recaptcha', '~> 5.17.1'
 gem 'rack-attack'
 
 gem 'cssbundling-rails', '~> 1.4'
+
+gem 'jsbundling-rails', '~> 1.3'

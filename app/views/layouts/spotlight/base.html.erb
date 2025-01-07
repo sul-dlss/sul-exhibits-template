@@ -22,7 +22,16 @@
     <% end %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2024-12-18/styles/sul.css" />
     <%= stylesheet_link_tag "component_library_overrides" %>
-    <%= javascript_include_tag "application", async: Settings.async_javascript %>
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous"></script>
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <script src="//js.honeybadger.io/v6.10/honeybadger.min.js" type="text/javascript"></script>
     <script type="text/javascript">
      Honeybadger.configure({
        apiKey: '<%= Honeybadger.config.get(:api_key) %>',
@@ -38,7 +47,7 @@
     <%= description %>
     <%= twitter_card %>
     <%= opengraph %>
-    <%= javascript_tag "Spotlight.sirTrevorIcon = '#{asset_path('spotlight/blocks/sir-trevor-icons.svg')}'" %>
+    <%= javascript_tag "window.sirTrevorIcon = '#{asset_path('spotlight/blocks/sir-trevor-icons.svg')}'" %>
   </head>
   <body class="<%= render_body_class %>">
     <%= render blacklight_config.skip_link_component.new(render_search_link: should_render_spotlight_search_bar?) do %>

@@ -1,12 +1,16 @@
 {
   "dependencies": {
+    "@github/auto-complete-element": "^3.6.2",
     "@popperjs/core": "^2.11.8",
     "autoprefixer": "^10.4.20",
     "blacklight-frontend": "^8.8.0",
     "blacklight-gallery": "^4.6.3",
+    "blacklight-heatmaps": "^1.3.1",
+    "blacklight-oembed": "^1.2.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "bootstrap-slider": "^11.0.2",
+    "ev-emitter": "^2.1.2",
     "leaflet": "^1.9.4",
     "leaflet-sidebar": "^0.2.4",
     "nodemon": "^3.1.7",
@@ -14,15 +18,22 @@
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "sass": "^1.82.0",
+    "sir-trevor": "^0.8.2",
     "spotlight-frontend": "^4.7.0"
   },
   "scripts": {
     "build:css:compile": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
     "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
     "build:css": "yarn build:css:compile && yarn build:css:prefix",
-    "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
+    "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\"",
+    "build": "rollup -c --bundleConfigAsCjs rollup.config.js"
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "rollup": "^4.30.1"
+  }
 }

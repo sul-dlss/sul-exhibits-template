@@ -1,3 +1,5 @@
+import BlacklightHeatmaps from 'blacklight-heatmaps'
+
 // Override the leaflet sidebar to update our own documents container that appears below the map.
 L.Control.ExhibitsSidebar = L.Control.Sidebar.extend({
   show: function() {

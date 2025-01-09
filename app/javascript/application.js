@@ -4,10 +4,11 @@
 //= require turbolinks
 //
 // Required by Blacklight
+import * as bootstrap from "bootstrap"
 import './blacklight'
-import './sir_trevor'
 
-import "spotlight-frontend/app/assets/javascripts/spotlight/spotlight.esm.js";
+
+import './spotlight'
 import githubAutoCompleteElement from "@github/auto-complete-element";
 
 import './bibliography'

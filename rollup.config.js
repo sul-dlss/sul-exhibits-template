@@ -16,7 +16,7 @@ export default {
     commonjs()
   ],
   external: [
-    'jquery' //,
+    // 'jquery' //,
     // 'clipboard'
   ]
 }

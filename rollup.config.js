@@ -6,13 +6,17 @@ export default {
     file: "app/assets/builds/application.js",
     format: "esm",
     inlineDynamicImports: true,
-    sourcemap: true
+    sourcemap: true,
+   	globals : {
+      // clipboard: 'Clipboard'
+    }
   },
   plugins: [
     resolve(),
     commonjs()
   ],
-  external: ['jquery'],
-	globals : {
-	}
+  external: [
+    'jquery' //,
+    // 'clipboard'
+  ]
 }

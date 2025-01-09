@@ -20,7 +20,8 @@
     "postcss-cli": "^11.0.0",
     "sass": "^1.82.0",
     "sir-trevor": "^0.8.2",
-    "spotlight-frontend": "^4.7.0"
+    "spotlight-frontend": "^4.7.0",
+    "typeahead.js": "^0.11.1"
   },
   "scripts": {
     "build:css:compile": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",

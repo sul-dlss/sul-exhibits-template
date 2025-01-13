@@ -1,0 +1,20 @@
+<%# Override Spotlight layout for accessibility: https://github.com/sul-dlss/exhibits/issues/2466 %>
+<%# TODO: Spotlight v5 changes this layout %>
+
+<% content_for(:content) do %>
+  <% if content_for? :sidebar %>
+    <aside id="sidebar" class="<%= sidebar_classes %> <%= content_for(:sidebar_position) || 'order-first' %>" aria-label="<%= t('blacklight.search.documents.aria.limit_search') %>">
+      <%= content_for(:sidebar) %>
+    </aside>
+
+    <section id="content" class="<%= main_content_classes %> <%= content_for(:content_position) || 'order-last' %>" aria-label="<%= t('blacklight.search.search_results') %>">
+      <%= yield %>
+    </section>
+  <% else %>
+    <section id="content" class="col-md-12">
+      <%= yield %>
+    </section>
+  <% end %>
+<% end %>
+
+<%= render template: "layouts/spotlight/base" %>

@@ -172,9 +172,9 @@ binary-extensions@^2.0.0:
     bootstrap ">=4.3.1 <6.0.0"
 
 blacklight-gallery@^4.6.3:
-  version "4.6.3"
-  resolved "https://registry.yarnpkg.com/blacklight-gallery/-/blacklight-gallery-4.6.3.tgz#5e812928185f075afb89e7263834b8bc26765455"
-  integrity sha512-wfq46OyAzEhnRVw9/sd8leePXidDYnbxTzSo57drmIF+X/LbJYGzc8E2Ir20mKoTcsveq8PoaneZYFapHPYSAw==
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/blacklight-gallery/-/blacklight-gallery-4.7.0.tgz#0f040fb39c3cada8b091a471143acfe3c8665fef"
+  integrity sha512-p4ad3SHYZnUtcnyfyHJey/ynTWhSgyBnn6fnz8iXS5tjJ1wbdyfN8KyPr0lRaBENX1QGlvI/Fkcccfw1gJTQfg==
   dependencies:
     blacklight-frontend ">=7.1.0 <9"
     jquery ">=3.0"
@@ -525,6 +525,18 @@ normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
+
+openseadragon-rails@^1.0.4:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/openseadragon-rails/-/openseadragon-rails-1.0.12.tgz#fdbff81421f6fc2a004afc6109961715bf6c7e94"
+  integrity sha512-HcPVTgPLSgL+T22or4YAIq0GWF9FrPilyCHauiFuVktBfirPuR4lADIy+rR82743D+aN+1zyLieZoyHibo3+pw==
+  dependencies:
+    openseadragon "^5.0.1"
+
+openseadragon@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/openseadragon/-/openseadragon-5.0.1.tgz#ad3aaccc6c0f733c3153131e9af05bc2e17a1952"
+  integrity sha512-a/hjouW9i3UfWxRADVYN2MyRhXMGnE7x9VVL7/4jXCcDLFyO4UM5o4RStYtqa5BfaHw/wMNAaD2WbxQF8f1pJg==
 
 path-type@^5.0.0:
   version "5.0.0"

@@ -1,2 +1,1 @@
-//= require openseadragon/openseadragon
-//= require openseadragon/rails
+//= require openseadragon-rails/index

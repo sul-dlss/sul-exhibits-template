@@ -284,7 +284,6 @@
   <copyField source="topic_subx_search" dest="topic_subx_unstem_search" />
   <copyField source="geographic_search" dest="geographic_unstem_search" />
   <copyField source="geographic_subz_search" dest="geographic_subz_unstem_search" />
-  <copyField source="subject_other_search" dest="subject_other_unstem_search" />
   <copyField source="subject_other_subvy_search" dest="subject_other_subvy_unstem_search" />
   <copyField source="subject_all_search" dest="subject_all_unstem_search" />
   <!-- unstemmed search fields: toc/summary -->
@@ -300,7 +299,6 @@
 
   <!-- image fields -->
   <copyField source="topic_search" dest="topic_display" />
-  <copyField source="subject_other_search" dest="subject_other_display" />
   <copyField source="title_variant_search" dest="title_variant_display" />
   <copyField source="summary_search" dest="summary_display" />
   <copyField source="pub_search" dest="pub_display" />

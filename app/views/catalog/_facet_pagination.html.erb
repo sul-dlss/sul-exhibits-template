@@ -1,1 +1,1 @@
-<%= render(FacetFieldPaginationComponent.new(facet_field: facet_field_presenter(@facet, @display_facet))) %>
+<%= render(Blacklight::FacetFieldPaginationComponent.new(facet_field: facet_field_presenter(@facet, @display_facet), button_classes: %w[btn btn-outline-primary])) %>

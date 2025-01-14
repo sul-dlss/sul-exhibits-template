@@ -9,7 +9,8 @@ describe 'catalog/_embedded_mirador3' do
   before do
     without_partial_double_verification do
       allow(view).to receive_messages(
-        document: document
+        document: document,
+        block: nil
       )
     end
   end
@@ -17,7 +18,10 @@ describe 'catalog/_embedded_mirador3' do
   it 'renders an iframe' do
     render
 
-    expect(rendered).to have_css "iframe[src='https://embed.stanford.edu/iiif?#{{ url: manifest_url }.to_query}']"
+    expect(rendered).to have_css "iframe[src='#{Settings.iiif_embed.url}?#{{
+      url: manifest_url, canvas_id: '',
+      iiif_initial_viewer_config: ''
+    }.to_query}']"
   end
 
   context 'with a local IIIF manifest' do
@@ -28,7 +32,10 @@ describe 'catalog/_embedded_mirador3' do
 
       render
 
-      expect(rendered).to have_css "iframe[src='https://embed.stanford.edu/iiif?#{{ url: expected_url }.to_query}']"
+      expect(rendered).to have_css "iframe[src='#{Settings.iiif_embed.url}?#{{
+        url: expected_url, canvas_id: '',
+        iiif_initial_viewer_config: ''
+      }.to_query}']"
     end
   end
 end

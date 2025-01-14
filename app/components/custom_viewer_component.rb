@@ -11,6 +11,10 @@ class CustomViewerComponent < Blacklight::Component
     @document = document
     @presenter = presenter
     @view_config = view_config
-    @block_context = block_context
+    @block_context = correct_block(block_context)
+  end
+
+  def correct_block(block_context)
+    block_context&.item&.select { |_key, value| value['id'] == @document.id }
   end
 end

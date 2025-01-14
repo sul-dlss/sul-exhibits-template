@@ -323,9 +323,6 @@ GEM
     ffi-compiler (1.3.2)
       ffi (>= 1.15.5)
       rake
-    file_validators (3.0.0)
-      activemodel (>= 3.2)
-      mime-types (>= 1.0)
     friendly_id (5.5.1)
       activerecord (>= 4.0.0)
     gapic-common (0.24.0)
@@ -924,7 +921,6 @@ DEPENDENCIES
   dotenv
   factory_bot_rails (~> 6.4)
   faraday
-  file_validators
   friendly_id (~> 5.4)
   honeybadger
   iiif-presentation

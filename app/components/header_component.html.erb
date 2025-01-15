@@ -1,40 +1,38 @@
-    <header>
-      <div class="identity-bar bg-cardinal">
-        <div class="container">
-          <a class="su-brand-bar__logo" href="https://www.stanford.edu">Stanford University</a>
-        </div>
-      </div>
-      <nav
-        class="navbar navbar-expand-md bg-light"
+<header>
+  <div class="identity-bar bg-cardinal">
+    <div class="container">
+      <a class="su-brand-bar__logo" href="https://www.stanford.edu"
+        >Stanford University</a
       >
-        <div class="container">
-          <a
-            class="mb-0 navbar-brand navbar-logo"
-            href="https://library.stanford.edu"
-            >Stanford University Libraries</a
-          >
-          <button
-            class="navbar-toggler navbar-toggler-right"
-            type="button"
-            data-toggle="collapse"
-            data-bs-toggle="collapse"
-            data-target="#user-util-collapse"
-            data-bs-target="#user-util-collapse"
-            aria-controls="user-util-collapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-md bg-light">
+    <div class="container">
+      <a
+        class="mb-0 navbar-brand navbar-logo"
+        href="https://library.stanford.edu"
+        >Stanford University Libraries</a
+      >
+      <button
+        class="navbar-toggler navbar-toggler-right collapsed"
+        type="button"
+        data-toggle="collapse"
+        data-bs-toggle="collapse"
+        data-target="#user-util-collapse"
+        data-bs-target="#user-util-collapse"
+        aria-controls="user-util-collapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <div
-            class="collapse navbar-collapse justify-content-md-end"
-            id="user-util-collapse"
-          >
-            <%= render 'shared/user_util_links' %>
-          </div>
-        </div>
-      </nav>
-
-      <%= render 'shared/masthead' %>
-    </header>
+      <div
+        class="d-md-block d-none"
+      >
+        <%= render 'shared/user_util_links' %>
+      </div>
+    </div>
+  </nav>
+  <%= render 'shared/masthead' %>
+</header>

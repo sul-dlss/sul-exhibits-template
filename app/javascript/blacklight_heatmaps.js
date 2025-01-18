@@ -1,5 +1,7 @@
 import 'leaflet'
 import 'leaflet-sidebar/src/L.Control.Sidebar'
-// import 'blacklight-heatmaps/vendor/assets/javascripts/leaflet_solr_heatmap'
-import 'blacklight-heatmaps/app/assets/javascripts/blacklight_heatmaps/default.esm'
+
+import BlacklightHeatmaps from 'blacklight-heatmaps/app/assets/javascripts/blacklight_heatmaps/default.esm'
+window.BlacklightHeatmaps = BlacklightHeatmaps
+
 import './blacklight_heatmaps_overrides'

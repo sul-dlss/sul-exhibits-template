@@ -30,6 +30,7 @@
         src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
+    <%= javascript_include_tag 'typeahead.bundle.min', "data-turbo-track": "reload", defer: false %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
     <script src="//js.honeybadger.io/v6.10/honeybadger.min.js" type="text/javascript"></script>
     <script type="text/javascript">

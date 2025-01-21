@@ -20,7 +20,7 @@ import 'blacklight-gallery/app/assets/javascripts/blacklight_gallery/masonry'
 import './blacklight_heatmaps'
 
 
-import 'blacklight-oembed'
+import './blacklight_oembed'
 import './full_text_collapse'
 import './index_status_typeahead'
 import './exhibit_search_typeahead'

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'Canvas Display' do
+RSpec.describe 'Canvas Display' do
   let(:exhibit) { create(:exhibit, slug: 'default-exhibit') }
 
   let(:canvas_data) { JSON.parse(File.read('spec/fixtures/iiif/fh878gz0315-canvas-521.json')) }

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe ApplicationController do
+RSpec.describe ApplicationController do
   describe '#feature_flags' do
     before do
       allow(controller).to receive(:current_exhibit)

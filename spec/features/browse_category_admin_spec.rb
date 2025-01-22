@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'Browse category adminstration', :js do
+RSpec.describe 'Browse category adminstration', :js do
   let(:exhibit) { create(:exhibit) }
   let(:exhibit_curator) { create(:exhibit_curator, exhibit: exhibit) }
   let(:title) { 'New category title' }

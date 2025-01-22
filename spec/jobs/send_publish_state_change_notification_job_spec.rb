@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe SendPublishStateChangeNotificationJob do
+RSpec.describe SendPublishStateChangeNotificationJob do
   let(:job) { described_class.perform_now(exhibit: exhibit, published: published) }
   let(:exhibit) { FactoryBot.create(:exhibit) }
 

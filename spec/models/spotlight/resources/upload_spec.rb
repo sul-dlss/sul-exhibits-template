@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Spotlight::Resources::Upload do
+RSpec.describe Spotlight::Resources::Upload do
   subject(:resource) { described_class.create! exhibit: exhibit, upload: upload }
 
   let(:exhibit) { create(:exhibit) }

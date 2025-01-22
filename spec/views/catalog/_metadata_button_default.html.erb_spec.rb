@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'catalog/_metadata_button_default' do
+RSpec.describe 'catalog/_metadata_button_default' do
   let(:document) { SolrDocument.new(modsxml: 'stuff', id: 'abc') }
   let(:current_exhibit) { create(:exhibit) }
 

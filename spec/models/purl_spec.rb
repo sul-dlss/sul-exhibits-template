@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Purl do
+RSpec.describe Purl do
   subject(:purl) { described_class.new(druid) }
 
   before do

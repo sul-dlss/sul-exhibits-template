@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe DorHarvester do
+RSpec.describe DorHarvester do
   subject(:harvester) { described_class.create druid_list: druid, exhibit: exhibit }
 
   let(:exhibit) { create(:exhibit) }

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'an exhibit' do
+RSpec.describe 'an exhibit' do
   let!(:exhibit) { create(:exhibit) }
 
   it 'loads the home page' do

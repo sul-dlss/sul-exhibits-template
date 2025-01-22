@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'Alt text instructions', :js do
+RSpec.describe 'Alt text instructions', :js do
   include JavascriptFeatureHelpers
 
   let(:exhibit) { create(:exhibit) }

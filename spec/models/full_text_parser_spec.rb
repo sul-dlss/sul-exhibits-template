@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe FullTextParser do
+RSpec.describe FullTextParser do
   subject(:parser) { described_class.new(purl_object) }
 
   let(:purl_object) { double('PurlObject', bare_druid: 'cc842mn9348', public_xml: public_xml) }

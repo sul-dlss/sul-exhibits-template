@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe User do
+RSpec.describe User do
   subject { create(:user) }
 
   describe '#shibboleth_groups=' do

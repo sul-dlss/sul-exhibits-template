@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Spotlight::Exhibit do
+RSpec.describe Spotlight::Exhibit do
   describe 'exhibit extensions' do
     context 'when an exhibit is published' do
       let(:exhibit) { FactoryBot.create(:exhibit, published: false) }

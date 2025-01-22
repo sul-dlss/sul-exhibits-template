@@ -6,7 +6,7 @@
     "blacklight-frontend": "^8.8.0",
     "blacklight-gallery": "^4.6.3",
     "blacklight-heatmaps": "^1.4.0",
-    "blacklight-oembed": "^1.2.0",
+    "blacklight-oembed": "^1.4.2",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "bootstrap-slider": "^11.0.2",

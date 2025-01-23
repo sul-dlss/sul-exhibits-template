@@ -1,3 +1,42 @@
+GIT
+  remote: https://github.com/projectblacklight/spotlight.git
+  revision: b8cf2139d87b1c0cc5b4d682e9d85fb5a1d4635e
+  branch: main
+  specs:
+    blacklight-spotlight (5.0.0.alpha)
+      activejob-status
+      acts-as-taggable-on (>= 5.0, < 13)
+      blacklight (>= 8.7.0, < 9)
+      blacklight-gallery (>= 3.0, < 5)
+      bootstrap_form (>= 4.1, < 6)
+      cancancan
+      carrierwave (~> 2.2)
+      csv
+      devise (~> 4.9)
+      devise_invitable
+      faraday
+      faraday-follow_redirects
+      friendly_id (~> 5.5)
+      github-markup
+      google-analytics-data
+      i18n
+      i18n-active_record
+      iiif-presentation
+      iiif_manifest
+      mini_magick
+      nokogiri
+      oauth2
+      openseadragon (>= 0.8.0)
+      ostruct (!= 0.3.2, != 0.3.1, != 0.3.0)
+      paper_trail (>= 11.0, < 17)
+      rails (>= 7.1, < 9)
+      redcarpet (>= 2.0.1, < 4)
+      riiif (~> 2.0)
+      roar (~> 1.1)
+      roar-rails
+      signet
+      view_component (>= 2.66, < 4)
+
 GEM
   remote: https://gems.contribsys.com/
   specs:
@@ -118,43 +157,6 @@ GEM
       blacklight (>= 7.25, < 9)
       rails
       ruby-oembed
-    blacklight-spotlight (4.7.0)
-      activejob-status
-      acts-as-taggable-on (>= 5.0, < 12)
-      autoprefixer-rails
-      blacklight (>= 7.40, < 9)
-      blacklight-gallery (>= 3.0, < 5)
-      bootstrap_form (>= 4.1, < 6)
-      cancancan
-      carrierwave (~> 2.2)
-      clipboard-rails (~> 1.5)
-      csv
-      devise (~> 4.9)
-      devise_invitable
-      faraday
-      faraday-follow_redirects
-      friendly_id (~> 5.5)
-      github-markup
-      google-analytics-data
-      i18n
-      i18n-active_record
-      iiif-presentation
-      iiif_manifest
-      leaflet-rails
-      mini_magick
-      nokogiri
-      oauth2
-      openseadragon
-      ostruct (!= 0.3.2, != 0.3.1, != 0.3.0)
-      paper_trail (>= 11.0, < 16)
-      rails (>= 7.0, < 8)
-      redcarpet (>= 2.0.1, < 4)
-      riiif (~> 2.0)
-      roar (~> 1.1)
-      roar-rails
-      signet
-      tophat
-      view_component (>= 2.66, < 4)
     blacklight_advanced_search (8.0.0.alpha2)
       blacklight (>= 7.15, < 9)
       parslet
@@ -228,7 +230,6 @@ GEM
       citeproc (~> 1.0, >= 1.0.9)
       csl (~> 2.0)
       observer (< 1.0)
-    clipboard-rails (1.7.1)
     concurrent-ruby (1.3.5)
     config (5.5.2)
       deep_merge (~> 1.2, >= 1.2.1)
@@ -602,7 +603,7 @@ GEM
     orm_adapter (0.5.0)
     os (1.1.4)
     ostruct (0.6.1)
-    paper_trail (15.2.0)
+    paper_trail (16.0.0)
       activerecord (>= 6.1)
       request_store (~> 1.4)
     parallel (1.26.3)
@@ -614,6 +615,11 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
+    propshaft (1.1.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     psych (5.2.3)
       date
       stringio
@@ -821,13 +827,6 @@ GEM
       ostruct
       retriable
       ruby-progressbar
-    sprockets (4.2.1)
-      concurrent-ruby (~> 1.0)
-      rack (>= 2.2.4, < 4)
-    sprockets-rails (3.5.2)
-      actionpack (>= 6.1)
-      activesupport (>= 6.1)
-      sprockets (>= 3.0.0)
     sqlite3 (2.5.0-aarch64-linux-gnu)
     sqlite3 (2.5.0-aarch64-linux-musl)
     sqlite3 (2.5.0-arm-linux-gnu)
@@ -848,6 +847,8 @@ GEM
     stanford-mods (3.3.9)
       activesupport
       mods (~> 3.0, >= 3.0.4)
+    stimulus-rails (1.3.4)
+      railties (>= 6.0.0)
     stringio (3.1.2)
     test_xml (0.1.8)
       diffy (~> 3.0)
@@ -856,8 +857,6 @@ GEM
     time (0.4.1)
       date
     timeout (0.4.3)
-    tophat (2.3.1)
-      actionpack (>= 3.0.0)
     trailblazer-option (0.1.2)
     traject (3.8.2)
       concurrent-ruby (>= 0.8.0)
@@ -870,9 +869,9 @@ GEM
       nokogiri (~> 1.9)
       slop (~> 4.0)
       yell
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
+    turbo-rails (2.0.11)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     twitter-typeahead-rails (0.11.1.pre.corejavascript)
       actionpack (>= 3.1)
       jquery-rails
@@ -933,7 +932,7 @@ DEPENDENCIES
   blacklight (~> 8.0)
   blacklight-gallery (~> 4.8.4)
   blacklight-oembed (~> 1.0)
-  blacklight-spotlight (~> 4.4, >= 4.4.0)
+  blacklight-spotlight!
   blacklight_advanced_search
   blacklight_heatmaps (~> 1.4)
   blacklight_range_limit (~> 9.0)
@@ -965,7 +964,6 @@ DEPENDENCIES
   honeybadger
   iiif-presentation
   jbuilder (~> 2.7)
-  jquery-rails
   jsbundling-rails (~> 1.3)
   jsonpath
   letter_opener
@@ -975,6 +973,7 @@ DEPENDENCIES
   newrelic_rpm
   nokogiri (>= 1.7.1)
   okcomputer
+  propshaft
   puma (~> 6.0)
   purl_fetcher-client (~> 0.4)
   rack-attack
@@ -1002,11 +1001,11 @@ DEPENDENCIES
   slack-ruby-client
   slowpoke
   solr_wrapper
-  sprockets-rails
   sqlite3 (~> 2.0)
   stanford-mods (~> 3.0)
+  stimulus-rails
   traject
-  turbolinks (~> 5)
+  turbo-rails
   twitter-typeahead-rails (= 0.11.1.pre.corejavascript)
   tzinfo-data
   web-console (>= 4.1.0)

@@ -45,7 +45,7 @@ RSpec.describe 'Viewers' do
     it 'includes breadcrumbs on the edit page' do
       visit edit_exhibit_viewers_path(exhibit)
 
-      within('ul.breadcrumb') do
+      within('.breadcrumb') do
         expect(page).to have_link 'Home'
         expect(page).to have_link 'Configuration'
         expect(page).to have_css('li.active', text: 'Viewers')

@@ -1,0 +1,35 @@
+<%= render Blacklight::System::ModalComponent.new do |component| %>
+  <% component.with_title do %>
+    <div><h2 class="modal-title">Select image area</h2></div>
+  <% end %>
+  <% component.with_body do %>
+    <div class="p-4">
+      <% if @document %>
+        <p>
+          Adjust the image so that the viewer contains the area you want to display to exhibit visitors.
+          <ul>
+            <li>Click-and-drag to adjust position</li>
+            <li>Adjust zoom-level</li>
+            <li>Change page (for multi-page items)</li>
+          </ul>
+          Select Save changes to save the image area.
+        </p>
+        <%= render CustomViewerComponent.new(document: @document, presenter: document_presenter(@document), view_config: blacklight_config) %>
+      <% else %>
+        <p>
+        <%= link_to  params[:id], spotlight.exhibit_solr_document_path(current_exhibit, params[:id]) %> does on exist in this exhibit.
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+  <% component.with_footer do %>
+    <button type="button" class="btn btn-outline-primary me-2" data-bl-dismiss="modal">
+      Cancel
+    </button>
+    <% if @document %>
+      <button id="request-state" data-bl-dismiss="modal" data-form-id="<%= params[:form_id] %>" data-item-id="<%= params[:item_id] %>" class="btn btn-primary">
+        Save changes
+      </button>
+    <% end %>
+  <% end %>
+<% end %>

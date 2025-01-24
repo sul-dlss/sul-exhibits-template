@@ -504,6 +504,25 @@ class CatalogController < ApplicationController
     end
   end
 
+  def select_image_area
+    begin
+      result = search_service.fetch params[:id]
+      @document = if result.is_a?(Array)
+                    result.last
+                  else
+                    result
+                  end
+    rescue StandardError
+      @document = nil
+    end
+    respond_to do |format|
+      format.html do
+        return render layout: false if request.xhr?
+        # Otherwise draw the full page
+      end
+    end
+  end
+
   # Action for parker to fetch bibliography references by ID
   def documents_list
     search_service = Blacklight::SearchService.new(config: blacklight_config)

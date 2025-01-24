@@ -14,9 +14,7 @@ import githubAutoCompleteElement from "@github/auto-complete-element";
 import './bibliography'
 import './cited_documents'
 
-import 'blacklight-gallery.esm.js'
-// Swap above for below after https://github.com/projectblacklight/blacklight-gallery/pull/176
-// import 'blacklight-gallery/blacklight-gallery.esm.js'
+import 'blacklight-gallery/blacklight-gallery.esm.js'
 
 import './blacklight_heatmaps'
 import './blacklight_oembed'

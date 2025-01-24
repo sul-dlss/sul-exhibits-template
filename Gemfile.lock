@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/projectblacklight/spotlight.git
-  revision: b8cf2139d87b1c0cc5b4d682e9d85fb5a1d4635e
+  revision: 83c19467926c38d3e240994a8675bf87d037eb6f
   branch: main
   specs:
     blacklight-spotlight (5.0.0.alpha)
@@ -120,8 +120,8 @@ GEM
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
-    acts-as-taggable-on (11.0.0)
-      activerecord (>= 7.0, < 8.0)
+    acts-as-taggable-on (12.0.0)
+      activerecord (>= 7.1, < 8.1)
       zeitwerk (>= 2.4, < 3.0)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)

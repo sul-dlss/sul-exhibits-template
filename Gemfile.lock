@@ -931,7 +931,7 @@ DEPENDENCIES
   acts-as-taggable-on
   bibtex-ruby
   blacklight (~> 8.0)
-  blacklight-gallery (~> 4.4)
+  blacklight-gallery (~> 4.8.4)
   blacklight-oembed (~> 1.0)
   blacklight-spotlight (~> 4.4, >= 4.4.0)
   blacklight_advanced_search

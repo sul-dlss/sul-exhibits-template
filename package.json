@@ -4,7 +4,7 @@
     "@popperjs/core": "^2.11.8",
     "autoprefixer": "^10.4.20",
     "blacklight-frontend": "^8.8.0",
-    "blacklight-gallery": "^4.6.3",
+    "blacklight-gallery": "^4.8.4",
     "blacklight-heatmaps": "^1.4.0",
     "blacklight-oembed": "^1.4.2",
     "bootstrap": "^5.3.3",

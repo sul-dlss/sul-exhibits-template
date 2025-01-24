@@ -11,10 +11,7 @@ export default {
    	globals : {}
   },
   plugins: [
-    resolve({
-      // Remove after https://github.com/projectblacklight/blacklight-gallery/pull/176
-      modulePaths: ['node_modules/blacklight-gallery/app/assets/javascripts/blacklight_gallery']
-    }),
+    resolve(),
     commonjs()
   ],
   external: []

@@ -8,18 +8,16 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 7.2'
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
+gem 'propshaft'
+gem 'stimulus-rails'
 
 # Use Puma as the app server
 gem 'puma', '~> 6.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbo-rails'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
@@ -88,9 +86,10 @@ gem 'config'
 gem 'bootstrap', '~> 5.3'
 gem 'bootstrap_form', '~> 5.4'
 gem 'blacklight', '~> 8.0'
-gem 'blacklight-gallery', '~> 4.4'
-gem 'blacklight_heatmaps', '~> 1.3.0'
-gem 'blacklight-spotlight', '~> 4.4', '>= 4.4.0'
+gem 'blacklight-gallery', '~> 4.8.4'
+gem 'blacklight_heatmaps', '~> 1.4'
+# TODO: Switch to v5 when released
+gem 'blacklight-spotlight', github: 'projectblacklight/spotlight', branch: 'main'
 gem 'twitter-typeahead-rails', '0.11.1.pre.corejavascript'
 gem 'blacklight_advanced_search'
 gem 'blacklight_range_limit', '~> 9.0'
@@ -136,3 +135,5 @@ gem 'recaptcha', '~> 5.17.1'
 gem 'rack-attack'
 
 gem 'cssbundling-rails', '~> 1.4'
+
+gem 'jsbundling-rails', '~> 1.3'

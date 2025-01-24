@@ -15,6 +15,7 @@ RSpec.feature 'Full text highlighting' do
     visit spotlight.edit_exhibit_metadata_configuration_path(exhibit)
     page.find('#blacklight_configuration_index_fields_full_text_tesimv_list').click
     click_button 'Save changes'
+    page.find_button('Save changes', disabled: false) # Wait for the changes to be saved/that we're on the next page.
     sign_out user
   end
 

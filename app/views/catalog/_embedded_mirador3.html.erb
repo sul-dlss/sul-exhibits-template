@@ -1,7 +1,7 @@
 <% if document.manifest_url.present? %>
   <% manifest_url = document.manifest_url.starts_with?('/') ? root_url + document.manifest_url.slice(1..-1) : document.manifest_url %>
   <%= content_tag :iframe, '',
-        src: "#{Settings.iiif_embed.url}?#{{ url: manifest_url }.to_query}",
+        src: "#{Settings.iiif_embed.url}?#{{ url: manifest_url, canvas_id: choose_canvas_id(block) || params[:canvas_id], iiif_initial_viewer_config: choose_initial_viewer_config(block) || params[:iiif_initial_viewer_config]}.to_query}",
         allowfullscreen: true,
         class: 'mirador-embed-wrapper',
         frameborder: 0,

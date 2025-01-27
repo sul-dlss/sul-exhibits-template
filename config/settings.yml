@@ -30,7 +30,7 @@ feature_flags:
 traject:
   processing_thread_pool: 1
 iiif_embed:
-  url: https://embed.stanford.edu/iiif
+  url: https://embed-stage.stanford.edu/iiif
 iiif_dnd_base_url: https://library.stanford.edu/iiif?%{query}
 action_mailer:
   default_options:

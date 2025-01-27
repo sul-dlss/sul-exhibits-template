@@ -38,7 +38,7 @@
           <li class="dropdown-divider"></li>
         <% end %>
         <li>
-          <%= link_to t('spotlight.header_links.logout'), main_app.destroy_user_session_path, class: 'dropdown-item' %>
+          <%= link_to t('spotlight.header_links.logout'), main_app.destroy_user_session_path, class: 'dropdown-item', data: { turbo: false } %>
         </li>
       </ul>
     </li>
@@ -49,7 +49,9 @@
   <% end %>
   <% if current_exhibit and show_contact_form? %>
     <li class="nav-item">
-      <%= link_to t('spotlight.header_links.contact'), spotlight.new_exhibit_contact_form_path(current_exhibit), data: {behavior: 'contact-link', target: 'report-problem-form' }, class: 'nav-link' %>
+      <%= link_to t('spotlight.header_links.contact'), spotlight.new_exhibit_contact_form_path(current_exhibit),
+        data: { bs_toggle: 'collapse', bs_target: '#report-problem-form' },
+        class: 'nav-link' %>
     </li>
   <% end %>
 </ul>

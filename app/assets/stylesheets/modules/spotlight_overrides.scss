@@ -35,6 +35,12 @@ body {
   }
 }
 
+// TODO: Needed until we update to spotlight v5 that includes these styles.
+.browse-landing .image-overlay {
+  border: var(--bs-border-width) solid var(--bs-border-color-translucent);
+  border-radius: var(--bs-border-radius);
+}
+
 // Adjust size of page titles, headings, etc.
 .page-title,
 .page-header {

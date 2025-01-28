@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Viewer do
+RSpec.describe Viewer do
   let(:viewer) { create(:viewer) }
 
   it 'belongs to an exhibit' do

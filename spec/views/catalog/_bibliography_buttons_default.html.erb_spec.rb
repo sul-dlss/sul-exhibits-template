@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'catalog/_bibliography_buttons_default' do
+RSpec.describe 'catalog/_bibliography_buttons_default' do
   let(:document) { SolrDocument.new(format_main_ssim: 'Reference', bibtex_key_ss: url) }
 
   before do

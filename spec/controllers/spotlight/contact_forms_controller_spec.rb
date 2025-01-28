@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Spotlight::ContactFormsController do
+RSpec.describe Spotlight::ContactFormsController do
   routes { Spotlight::Engine.routes }
   let(:exhibit) { create(:exhibit) }
   let(:honeypot_field_name) { Spotlight::Engine.config.spambot_honeypot_email_field }

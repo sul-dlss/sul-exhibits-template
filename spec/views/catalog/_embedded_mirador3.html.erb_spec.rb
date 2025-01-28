@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'catalog/_embedded_mirador3' do
+RSpec.describe 'catalog/_embedded_mirador3' do
   let(:document) { SolrDocument.new(id: 'abc', iiif_manifest_url_ssi: manifest_url) }
   let(:manifest_url) { 'http://example.com/iiif/manifest' }
 

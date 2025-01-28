@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe ExhibitBot do
+RSpec.describe ExhibitBot do
   let(:bot) { described_class.new }
 
   context 'when notifications are configured' do

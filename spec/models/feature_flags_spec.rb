@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe FeatureFlags do
+RSpec.describe FeatureFlags do
   subject(:feature_flags) { described_class.new(settings).for(exhibit) }
 
   let(:exhibit) { create(:exhibit) }

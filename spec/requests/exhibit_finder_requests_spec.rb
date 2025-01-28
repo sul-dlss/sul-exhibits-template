@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'Exhibit Finder API' do
+RSpec.describe 'Exhibit Finder API' do
   let(:exhibit) { create(:exhibit) }
 
   describe '#show' do

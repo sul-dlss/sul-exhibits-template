@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe CatalogHelper do
+RSpec.describe CatalogHelper do
   describe '#has_thumbnail?' do
     context 'for references' do
       let(:document) { SolrDocument.new(format_main_ssim: ['Reference']) }

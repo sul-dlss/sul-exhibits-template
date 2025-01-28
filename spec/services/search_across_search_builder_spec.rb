@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe SearchAcrossSearchBuilder do
+RSpec.describe SearchAcrossSearchBuilder do
   subject(:search_builder) { described_class.new(scope) }
 
   let(:scope) do

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'Viewer Configuration' do
+RSpec.describe 'Viewer Configuration' do
   let(:exhibit) { create(:exhibit) }
   let(:user) { nil }
   let(:viewer) { Viewer.create(exhibit_id: exhibit.id) }

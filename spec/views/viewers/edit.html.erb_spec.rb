@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'viewers/edit' do
+RSpec.describe 'viewers/edit' do
   let(:exhibit) { create(:exhibit) }
   let(:viewer) { Viewer.create(exhibit_id: exhibit.id) }
 

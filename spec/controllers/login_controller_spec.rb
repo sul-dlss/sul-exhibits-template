@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe LoginController do
+RSpec.describe LoginController do
   let(:user) { create(:curator) }
 
   before do

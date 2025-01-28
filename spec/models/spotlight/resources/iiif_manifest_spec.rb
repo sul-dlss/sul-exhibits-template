@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Spotlight::Resources::IiifManifest do
+RSpec.describe Spotlight::Resources::IiifManifest do
   let(:manifest) do
     {
       'thumbnail' => {

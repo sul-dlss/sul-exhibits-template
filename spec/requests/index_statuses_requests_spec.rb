@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe 'Index Statuses' do
+RSpec.describe 'Index Statuses' do
   let(:exhibit) { create(:exhibit) }
   let(:user) { nil }
   let(:resource) { DorHarvester.create(exhibit: exhibit) }

@@ -21,3 +21,8 @@
 .navbar-nav {
   --bs-nav-link-color: black;
 }
+
+/* makes the hr span the length of the screen */
+.navbar-collapse hr {
+  margin-right: -100vw;
+}

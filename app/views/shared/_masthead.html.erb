@@ -5,7 +5,7 @@
 <% end %>
 
 <div class="masthead bg-light mb-0 pb-2">
-  <div class="container d-flex flex-wrap justify-content-between">
+  <div class="container d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-md-center align-items-start">
     <div class="">
       <h1 class="site-title h2">
         <% if content_for? :masthead %>
@@ -20,12 +20,21 @@
       <% end %>
     </div>
 
-    <div class="align-self-end">
-      <% if current_exhibit %>
-        <%= render ExhibitNavigationComponent.new %>
-      <% else %>
-        <%= render MastheadNavigationComponent.new %>
-      <% end %>
+    <div class="align-self-md-end align-self-start">
+      <div class="navbar collapse navbar-collapse d-md-flex me-md-2"
+        aria-label="browse" id="user-util-collapse">
+          <div>
+            <% if current_exhibit %>
+              <%= render ExhibitNavigationComponent.new %>
+            <% else %>
+              <%= render MastheadNavigationComponent.new %>
+            <% end %>
+            <div class="d-md-none">
+              <hr>
+              <%= render 'shared/user_util_links' %>
+            </div>
+          </div>
+      </div>
     </div>
   </div>
 </div>

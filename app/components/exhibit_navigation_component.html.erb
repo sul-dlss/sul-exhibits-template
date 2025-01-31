@@ -2,7 +2,7 @@
   <%= link_to(helpers.current_exhibit.title, helpers.spotlight.exhibit_path(helpers.current_exhibit), class: 'navbar-brand') %>
 <% end %>
 
-<ul class="masthead-navigation d-flex flex-row flex-wrap justify-content-end list-unstyled mb-0 align-self-end">
+<ul class="masthead-navigation d-md-flex flex-md-row flex-md-wrap justify-content-md-end list-unstyled mb-0 align-self-end">
   <li class="<%= "active" if helpers.current_page?([helpers.spotlight, helpers.current_exhibit]) %>"><%= link_to t(:'spotlight.curation.nav.home'), [helpers.spotlight, helpers.current_exhibit], class: 'd-block' %></li>
   <% helpers.current_exhibit.main_navigations.displayable.each do |navigation| %>
     <%= render partial: "shared/#{navigation.nav_type}_navbar", locals: { navigation: navigation } %>

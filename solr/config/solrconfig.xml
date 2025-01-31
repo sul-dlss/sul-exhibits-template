@@ -817,7 +817,7 @@
       <str name="f.name_roles_ssim.facet.matches">^[^|].*</str>
 
       <!-- Highlighting defaults -->
-      <str name="hl.fl">all_search full_text_search full_text_search_en full_text_search_pt full_text_search_id</str>
+      <str name="hl.fl">full_text_search full_text_search_en full_text_search_pt full_text_search_id</str>
 
       <str name="fl">
         score,

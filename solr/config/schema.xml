@@ -13,10 +13,10 @@
     <field name="last_updated" type="date" indexed="true" stored="true" default="NOW/SECOND" />
     <!-- entire marc bib record -->
     <field name="marcxml" type="string" indexed="false" stored="true" />
-    <!-- all_search: catch-all field for metadata text; stored for hit highlighting -->
-    <field name="all_search" type="text" indexed="true" stored="true" termVectors="true" termPositions="true" termOffsets="true" multiValued="true" />
-    <field name="all_unstem_search" type="textNoStem" indexed="true" stored="true" multiValued="true" />
-    <field name="vern_all_search" type="text" indexed="true" stored="true" multiValued="true" />
+    <!-- all_search: catch-all field for metadata text -->
+    <field name="all_search" type="text" indexed="true" stored="false" multiValued="true" />
+    <field name="all_unstem_search" type="textNoStem" indexed="true" stored="false" multiValued="true" />
+    <field name="vern_all_search" type="text" indexed="true" stored="false" multiValued="true" />
 
     <!-- Format Field: facet and display -->
     <field name="format" type="string" indexed="true" stored="true" multiValued="true" />

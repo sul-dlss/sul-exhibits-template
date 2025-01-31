@@ -1,6 +1,1 @@
-
-<% if rendered = custom_render_oembed_tag_async(document, canvas, block) %>
-  <div class="oembed-widget">
-    <%= rendered %>
-  </div>
-<% end %>
+<%= render OembedDefaultComponent.new(document:, canvas:, block:) %>

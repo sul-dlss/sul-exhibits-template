@@ -5,7 +5,6 @@
 <% else %>
   <% # block comes from a local passed in from Spotlight %>
   <% # https://github.com/projectblacklight/spotlight/blob/37f6a4c266db9aa9d2a59529340a634d1796fefc/app/views/spotlight/sir_trevor/blocks/_solr_documents_embed_block.html.erb#L10 %>
-  <%= helpers.render_viewer_in_context(document, block_context) %>
-  <% oembed_url = helpers.context_specific_oembed_url(document) %>
+  <%= render_viewer_in_context %>
   <%= link_to(oembed_url.sub(%r{^https?://}, ''), oembed_url, class: 'purl-link') if oembed_url %>
 <% end %>

@@ -8,5 +8,4 @@ purl:
   link:
     prefix: "http://purl.stanford.edu/"
 sidekiq:
-  logger_level: 'Logger::WARN'
-async_javascript: true
+  logger_level: "Logger::WARN"

@@ -62,6 +62,5 @@ slack_notifications:
   default_channel: "#spotlight-service-team"
   api_token: "your-api-token-here"
 index_status_threshold: 10
-async_javascript: false
 sidekiq_retry_queue_threshold: 100
 revision: <%= File.read("#{Rails.root}/REVISION").chomp if File.exist?("#{Rails.root}/REVISION") %>

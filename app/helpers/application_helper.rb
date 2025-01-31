@@ -54,7 +54,8 @@ module ApplicationHelper
     content_tag :div, '', data: {
       embed_url: blacklight_oembed_engine.embed_url(
         url: url,
-        canvas_id: canvas_id,
+        iiif_initial_viewer_config: choose_initial_viewer_config(block) || params[:iiif_initial_viewer_config],
+        canvas_id: canvas_id || params[:canvas_id],
         search: params[:search],
         maxheight: block&.maxheight.presence || '600',
         suggested_search: (current_search_session&.query_params || {})[:q]
@@ -67,7 +68,11 @@ module ApplicationHelper
   # @param [SirTrevorRails::Blocks::SolrDocumentsEmbedBlock] block
   # @return [String] Selected canvas URI
   def choose_canvas_id(sir_trevor_block)
-    sir_trevor_block&.items&.dig(0, 'iiif_canvas_id') if sir_trevor_block.respond_to? :items
+    sir_trevor_block&.item&.dig(0, 'iiif_canvas_id')
+  end
+
+  def choose_initial_viewer_config(sir_trevor_block)
+    sir_trevor_block&.item&.dig(0, 'iiif_initial_viewer_config')
   end
 
   def context_specific_oembed_url(document)

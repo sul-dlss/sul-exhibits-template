@@ -23,7 +23,9 @@ RSpec.describe CustomViewerComponent, type: :component do
     end
 
     it 'renders the component' do
-      expect(page).to have_css "iframe[src='https://embed.stanford.edu/iiif?#{{ url: manifest_url }.to_query}']"
+      expect(page).to have_css "iframe[src='https://embed.stanford.edu/iiif?#{{ url: manifest_url,
+                                                                                iiif_initial_viewer_config: '',
+                                                                                canvas_id: '' }.to_query}']"
     end
   end
 end

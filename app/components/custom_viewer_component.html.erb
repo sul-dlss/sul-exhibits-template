@@ -1,5 +1,5 @@
 <% if document.external_iiif? %>
-  <%= render EmbeddedMiradorComponent.new(document:) %>
+  <%= render EmbeddedMiradorComponent.new(document:, block: block_context) %>
 <% elsif document.uploaded_resource? %>
   <%= render Blacklight::Gallery::OpenseadragonEmbedComponent.new(document: document, presenter: presenter, view_config: view_config) %>
 <% else %>

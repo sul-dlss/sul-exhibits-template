@@ -2,7 +2,7 @@
 
 <% if exhibit_specific_manifest.present? %>
   <%= content_tag :iframe, '',
-        src: "#{Settings.iiif_embed.url}?#{{ url: exhibit_specific_manifest, image_tools: true, canvas_id: document.canvas.iiif_id }.to_query}",
+        src: "#{Settings.iiif_embed.url}?#{{ url: exhibit_specific_manifest, image_tools: true, canvas_id: choose_canvas_id(block) || params[:canvas_id], iiif_initial_viewer_config: choose_initial_viewer_config(block) || params[:iiif_initial_viewer_config] }.to_query}",
         allowfullscreen: true,
         class: 'mirador-embed-wrapper',
         frameborder: 0,

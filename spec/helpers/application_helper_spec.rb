@@ -3,6 +3,8 @@
 require 'rails_helper'
 
 describe ApplicationHelper do
+  let(:sir_trevor_block) { Struct.new(:item, :maxheight) }
+
   describe '#collection_title' do
     it 'unmangles the collection title from the compound field' do
       expect(helper.collection_title('foo-|-bar')).to eq 'bar'
@@ -51,7 +53,7 @@ describe ApplicationHelper do
           feature_flags: FeatureFlags.for(create(:exhibit))
         )
         rendered = helper.custom_render_oembed_tag_async(
-          document, 3, instance_double('SirTrevor::Block', maxheight: 300)
+          document, 3, sir_trevor_block.new(maxheight: 300)
         )
 
         expect(rendered).to have_css '[data-embed-url="http://test.host/oembed/e'\
@@ -76,11 +78,9 @@ describe ApplicationHelper do
   describe '#choose_canvas_id' do
     context 'with a valid SirTrevor Block' do
       let(:canvas_index) { 4 }
+
       let(:st_block) do
-        instance_double(
-          SirTrevorRails::Blocks::SolrDocumentsEmbedBlock,
-          items: [{ 'iiif_canvas_id' => "http://example.com/ab123cd4567_#{canvas_index}" }]
-        )
+        sir_trevor_block.new(item: [{ 'iiif_canvas_id' => "http://example.com/ab123cd4567_#{canvas_index}" }])
       end
 
       it 'returns the selected iiif_canvas_id from the block' do
@@ -90,7 +90,7 @@ describe ApplicationHelper do
 
     context 'with SirTrevorBlock that is missing things' do
       let(:st_block) do
-        instance_double(SirTrevorRails::Blocks::SolrDocumentsEmbedBlock)
+        sir_trevor_block.new(item: nil)
       end
 
       it 'defaults to nil' do

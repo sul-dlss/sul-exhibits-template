@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_16_120405) do
+ActiveRecord::Schema[7.2].define(version: 2024_12_12_200851) do
   create_table "bibliography_services", force: :cascade do |t|
     t.string "header"
     t.string "api_id"
@@ -217,6 +217,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_16_120405) do
     t.string "iiif_canvas_id"
     t.string "iiif_image_id"
     t.string "iiif_tilesource"
+    t.string "iiif_initial_viewer_config"
   end
 
   create_table "spotlight_filters", force: :cascade do |t|
